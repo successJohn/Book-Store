@@ -5,4 +5,7 @@ import com.springprojects.BookStore.model.UserModel;
 
 public interface UserService {
     User registerUser(UserModel user);
+    void saveVerificationTokenForUser(String token, User user);
+
+    String validateVerificationToken(String token);
 }
